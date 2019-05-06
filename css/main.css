@@ -1,3 +1,4 @@
+/*** base styles ***/
 body{
   background-color: #020015;
   color: #fff;
@@ -12,54 +13,53 @@ body{
  }
  .third-width{
    width:33%;
-   max-width: 500px;
    float: left;
+    margin-top: 20px;
+    
  }
  .half-width{
    width:50%;
    max-width: 800px;
    float: left;
+    margin-top: 20px;
  }
  .full-width{
    width:100%;
    clear: both;
+   margin-top: 20px;
  }
 .main-container{
   width:100%;
   margin:0 auto;
    padding:10px; margin-top:40px;
  }
+
  /***
  .main-container *{
    padding:10px;
    background:#aaa;
    border:dashed 5px #000;
 
+   .main-container * + *{
+     margin-top:20px;
+   }
  }
- .main-container * + *{
-   margin-top:20px;
- }
+
 ***/
+
+/*** header section ***/
 .half-width#main-nav{
   float:right;
-  background-color: #020015;
+
 }
 .half-width#my-name{
-  background-color: #020015;
+
 }
+
 .full-width#my-logo{
   align-content: center;
 }
-#logo{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:120px;
-  position:-webkit-sticky;
-  position:sticky;
-  top:0;
-  z-index: 99;
-}
+
 nav a{
   text-decoration: none;
   color: #FFF;
@@ -83,7 +83,41 @@ position:-webkit-sticky;
 position:sticky;
 top:0;
 }
+
+/*** main section ***/
+#logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:120px;
+  z-index: 99;
+}
 .main-content{
   margin-top: 20px;
   min-height:2000px;
+}
+
+/*** resume hero ***/
+.full-width#hero-resume{
+  background-color: #fff;
+  height:331px;
+}
+
+.third-width#my-face{
+  padding: 0 20px 0 20px;
+}
+#face{
+  width: 230px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#hero-resume-link {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
