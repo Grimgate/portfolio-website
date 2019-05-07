@@ -12,6 +12,7 @@ body{
   font-family:arial;
    font-weight:bold;
    font-size:20px;
+   z-index: 0;
  }
  h1{
    font-family: 'Pacifico', cursive;
@@ -21,29 +22,50 @@ body{
  h2{
    font-family: Monoton;
    font-size: 80px;
-   text-align: center;
    font-weight: 100;
-
+   clear:both;
  }
-
+ /**the resume container **/
  div#resume-container:hover  {
    color:var(--neonpink);
    background-color: #131223;
    transition: all .5s ease-in;
+   z-index: 1;
  }
  div#resume-container {
    background-color: var(--blackblue);
    transition: all .5s ease-in;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
  }
+ #toggle-resume{
+   opacity: 100;
+   margin-left: -80px;
+   margin-bottom: -200px;
+ }
+#toggle-resume:checked ~ div#resume-container{
+  visibility: visible;
+height: 1000px;
+width:100%;
+background-color: #fff;
+}
+.full-width#resume-content{
+  transition: all .5s ease-in;
+  visibility: hidden;
+  height:0;
+  width:0;
+}
+
+
  .third-width{
    width:33%;
    float: left;
     margin-top: 20px;
-
  }
  .half-width{
    width:50%;
-
    float: left;
     margin-top: 20px;
  }
@@ -120,10 +142,10 @@ top:0;
 }
 .main-content{
   margin-top: 20px;
-  min-height:2000px;
 }
 
 /*** resume hero ***/
+/*
 .full-width#hero-resume{
   background-color: #fff;
   box-shadow: 10px 10px 5px #000000;
@@ -154,3 +176,4 @@ top:0;
   text-align: center;
   width: 100%;
 }
+*/
