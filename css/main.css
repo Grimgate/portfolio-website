@@ -1,13 +1,15 @@
 
 /** variable declarations**/
 :root{
-  --blackblue: #020015;
+  --blackblue: #131223;
   --neonblue:#78cccd;
   --neonpink:#fd8dde;
+  --skyblue:#6ac2dc;
 }
 
 body{
-  background-color: var(--blackblue);
+
+background-color: var(--skyblue);
   color: #fff;
   font-family:arial;
    font-weight:bold;
@@ -25,38 +27,6 @@ body{
    font-weight: 100;
    clear:both;
  }
- /**the resume container **/
- div#resume-container:hover  {
-   color:var(--neonpink);
-   background-color: #131223;
-   transition: all .5s ease-in;
-   z-index: 1;
- }
- div#resume-container {
-   background-color: var(--blackblue);
-   transition: all .5s ease-in;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
- }
- #toggle-resume{
-   opacity: 100;
-   margin-left: -80px;
-   margin-bottom: -200px;
- }
-#toggle-resume:checked ~ div#resume-container{
-  visibility: visible;
-height: 1000px;
-width:100%;
-background-color: #fff;
-}
-.full-width#resume-content{
-  transition: all .5s ease-in;
-  visibility: hidden;
-  height:0;
-  width:0;
-}
 
 
  .third-width{
@@ -78,7 +48,7 @@ background-color: #fff;
 .main-container{
   width:100%;
   margin:0 auto;
-   padding:10px; margin-top:40px;
+
  }
 
  /***
@@ -105,6 +75,109 @@ background-color: #fff;
 
 .full-width#my-logo{
   align-content: center;
+  ;
+
+}
+
+/** hero secion & ocean wave animation **/
+div.full-width#wave-container{
+  position: relative;
+  height:400px;
+
+}
+div.full-width#hero{
+
+}
+@keyframes wave{
+  0%,100%{
+    transform: translate(0,0);
+  }
+  25%{
+    transform: translate(25px,5px);
+  }
+  50%{
+    transform: translate(50px,0px);
+  }
+  75%{
+    transform: translate(25px,-5px);
+  }
+}
+
+@keyframes wave2 {
+  0%,100%{
+    transform: translate(0,0);
+  }
+  25%{
+    transform: translate(-25px,-5px);
+  }
+  50%{
+    transform: translate(-50px,0px);
+  }
+  75%{
+    transform: translate(-25px,5px);
+  }
+
+}
+.wave{
+
+}
+@keyframes break {
+  0%{
+    transform: translate(0,0);
+    }
+  50%{
+    transform: translate(50px,0);
+      }
+  100%{
+    transform: translate(0,0);
+  }
+}
+
+#ocean-break{
+  position:absolute;
+  bottom: -100;
+  left:-100;
+  z-index: 4;
+  height: 280PX;
+  -webkit-animation: break 5s linear infinite; /* Safari 4+ */
+  -moz-animation:break 5s linear infinite; /* Fx 5+ */
+  -o-animation:break 5s linear infinite; /* Opera 12+ */
+  animation:break 5s linear infinite;  /* IE 10+, Fx 29+ */
+}
+#ocean-wave{
+  position:absolute;
+  bottom: 0;
+  left:-200;
+  height:300px;
+  z-index:3;
+  -webkit-animation: wave 5s linear infinite; /* Safari 4+ */
+  -moz-animation:wave 5s linear infinite; /* Fx 5+ */
+  -o-animation:wave 5s linear infinite; /* Opera 12+ */
+  animation:wave 5s linear infinite;  /* IE 10+, Fx 29+ */
+
+}
+#ocean-wave-2{
+  position:absolute;
+  bottom: 60;
+  left:-100;
+  height:300px;
+  z-index:2;
+  -webkit-animation: wave2 4s linear infinite; /* Safari 4+ */
+  -moz-animation:wave2 4s linear infinite; /* Fx 5+ */
+  -o-animation:wave2 4s linear infinite; /* Opera 12+ */
+  animation:wave2 4s linear infinite;  /* IE 10+, Fx 29+ */
+
+}
+#ocean-wave-3{
+  position:absolute;
+  bottom: 120;
+  left:-150;
+  height:300px;
+  z-index:1;
+  -webkit-animation: wave 8s linear infinite; /* Safari 4+ */
+  -moz-animation:wave 8s linear infinite; /* Fx 5+ */
+  -o-animation:wave 8s linear infinite; /* Opera 12+ */
+  animation:wave 8s linear infinite;  /* IE 10+, Fx 29+ */
 }
 
 nav a{
@@ -142,6 +215,51 @@ top:0;
 }
 .main-content{
   margin-top: 20px;
+}
+/**the resume container **/
+
+div#resume-container {
+  background-color: var(--blackblue);
+ transition: color, background-color .5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+}
+#toggle-resume{
+  opacity: 100;
+  margin-left: -80px;
+  margin-bottom: -200px;
+}
+div#resume-container:hover  {
+  color:var(--neonpink);
+  background-color: #131223;
+  transition: color,background-color .5s ease-in;
+}
+#toggle-resume:checked ~ div#resume-container *{
+ visibility: visible;
+ max-height: 800px;
+ transition: visibility, max-height, height 1s ease-in-out;
+}
+#toggle-resume:checked ~ div#resume-container {
+background-color: #fff;
+transition: height 1s linear;
+max-height: 800px;
+transition: height 1s;
+color:var(--neonpink);
+background-color: #131223;
+}
+div#resume-content{
+ transition: all .5s ease-in-out;
+visibility: hidden;
+ background-color: #202020;
+ width:100%;
+ padding:20px 30px;
+ max-height: 0px;
+ display: flex;
+ flex-wrap:wrap;
 }
 
 /*** resume hero ***/
