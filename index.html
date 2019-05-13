@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Monoton|Pacifico|Righteous" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton|Pacifico|Righteous|Exo+2:900" rel="stylesheet">
 </head>
 
 
@@ -18,7 +18,6 @@
         <ul>
           <li> <a href="#portfolio">Portfolio</a> </li>
           <li> <a href="#resume">Resume</a> </li>
-          <li> <a href="#about">About</a> </li>
           <li> <a href="#">Home</a> </li>
         </ul>
       </nav>
@@ -28,50 +27,81 @@
 
   <div class="main-content">
     <div class="full-width" id="hero">
-        <div class="full-width" id="my-logo">
-          <img id="logo" src="img/mylogo.svg" alt="a stylized logo of the letters J and L" >
+          <div class="full-width" id="logo-container">
+            <img id="logo" src="img/mylogo.svg" alt="a stylized logo of the letters J and L" >
+          </div>
+      <div id="islands-container">
+          <img id="islands-right" src="img/bgislands.svg" alt="a small cluster of green islands" >
+          <img id="islands-left" src="img/bgislands2.svg" alt="a small cluster of green islands" >
         </div>
         <div class="full-width" id="wave-container">
-            <div class="full-width"> <img class="wave" id="ocean-wave" src="img/oceanwave.svg" alt="a stylized ocean wave">
-            </div>
-            <div class="full-width"> <img class="wave"  id="ocean-wave-2" src="img/oceanwave.svg" alt="a stylized ocean wave">
-            </div>
-            <div class="full-width"> <img class="wave"  id="ocean-wave-3" src="img/oceanwave.svg" alt="a stylized ocean wave">
-            </div>
-            <div class="full-width"> <img class="break"  id="ocean-break" src="img/oceanbreak.svg" alt="a stylized ocean wave">
-            </div>
+
+              <img class="wave" id="ocean-wave" src="img/oceanwave3.svg" alt="a stylized ocean wave">
+              <img class="wave"  id="ocean-wave-2" src="img/oceanwave3.svg" alt="a stylized ocean wave">
+              <img class="wave"  id="ocean-wave-3" src="img/oceanwave3.svg" alt="a stylized ocean wave">
+              <img class="break"  id="ocean-break" src="img/oceanbreak2.svg" alt="a stylized ocean wave">
+
         </div>
     </div>
-    <input type="checkbox" id="toggle-resume">
-    <div class="full-width" id="resume-container">
-    <label for="toggle-resume"><h2>Resume</h2></label>
 
-    <div class="full-width" id="resume-content">
-      <h3>asdlkughASklfijgasdkliyagssdljkfgsldkfglskdvhzxkdljvbkdfsxjubviklzsdbvik;ozdsfbv;klxzcjjvbz;iosudfghvb;fiozdubg;
-        kzljbv;zdsfoiuvghbzd;klfjvnbzds;oiuvjbdfrv;kljzdbnfv;kzudfvb;rlkuvjbzdervasdlkughASklfijgasdkliyagssdljkfgsldkfglskdvhzxkdljvbkdfsxjubviklzsdbvik;ozdsfbv;klxzcjjvbz;iosudfghvb;fiozdubg;
-          kzljbv;zdsfoiuvghbzd;klfjvnbzds;oiuvjbdfrv;kljzdbnfv;kzudfvb;rlkuvjbzdervasdlkughASklfijgasdkliyagssdljkfgsldkfglskdvhzxkdljvbkdfsxjubviklzsdbvik;ozdsfbv;klxzcjjvbz;iosudfghvb;fiozdubg;
-            kzljbv;zdsfoiuvghbzd;klfjvnbzds;oiuvjbdfrv;kljzdbnfv;kzudfvb;rlkuvjbzdervasdlkughASklfijgasdkliyagssdljkfgsldkfglskdvhzxkdljvbkdfsxjubviklzsdbvik;ozdsfbv;klxzcjjvbz;iosudfghvb;fiozdubg;
-              kzljbv;zdsfoiuvghbzd;klfjvnbzds;oiuvjbdfrv;kljzdbnfv;kzudfvb;rlkuvjbzderv</h3>
+
+            <input type="checkbox" id="toggle-resume">
+            <input type="checkbox" id="toggle-portfolio">
+            <div class="full-width" id="resume">
+                    <label for="toggle-resume"><div id="resume-label"><h2>Resume</h2></div></label>
+
+                    <div class="full-width" id="resume-content">
+                      <p>
+                        <h2>Objective</h2><br>
+                        Utilizing my varied work experiences, I seek to bring an adaptive, friendly, knowledgeable and creative perspective
+                        to a front end development role.<br>
+                        <h2>Qualifications<br></h2>
+                        <ul>
+                          BS in Computer Information Systems IT project management.  </li>
+                          <li>I have over 8 years of business management, customer service and web/graphic design experience.</li>
+                          <li>PSM I.</li>
+                          <li>A strong self-starter, I began my own web business in 2012 creating graphic designs for all manner of clientele,
+                        eventually culminating into a T-Shirt shop; all while attending college.</li>
+                        </ul><br>
+                        <h2>Experience<br></h2>
+                        Insurance Sales Agent The Hartford (Mar 2017 – Aug 2018)<br>
+                        Lead Designer & Web Developer (Jul 2012 – Present)<br>
+                        Team Lead U.S Treasury Dept. of the Census (Jan 2010 - Aug 2010)<br>
+                        <h2>Education<br></h2>
+                        Post University - B.Sc. Computer Information Systems Software Design and Engineering<br>
+                        <h2>Highlights<br></h2>
+                        Certified Scrum Master (PSM I)<br>
+                        Managerial Experience.<br>
+                        Technologically Literate.<br>
+                        Strong blend of soft and business skills.
+                      </p>
+                    </div>
+            </div>
+
+
+              <!-- cooment out hero resume content
+            <div class="full-width" id="hero-resume">
+
+              <div class="half-width" id="my-face">
+                <img id="face" src="img/myface.svg" alt="a simplified graphic of a bearded head">
+              </div>
+              <div class="half-width">
+                <a href="#resume" id="hero-resume-link">Resume</a>
+              </div>
+              -->
+
+            <div class="full-width" id="portfolio">
+              <label for="toggle-portfolio"><div id="portfolio-label"><h2>Portfolio</h2></div></label>
+              <div class="full-width" id="portfolio-content">
+                <h2>Coming Soon!</h2>
+              </div>
+            </div>
+
+
     </div>
-      </div>
 
-      <!-- cooment out hero resume content
-    <div class="full-width" id="hero-resume">
-
-      <div class="half-width" id="my-face">
-        <img id="face" src="img/myface.svg" alt="a simplified graphic of a bearded head">
-      </div>
-      <div class="half-width">
-        <a href="#resume" id="hero-resume-link">Resume</a>
-      </div>
-      -->
-    </div>
-    <div class="full-width" id="hero-portfolio">
-    </div>
-
-
-  </div>
-  <footer class="main-footer">FOOTER
+  <footer class="main-footer">
+    <h3>Copyright &copy; Justin Ledbetter. All Rights Reserved.</h3>
 
   </footer>
 </main>

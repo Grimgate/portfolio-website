@@ -6,15 +6,19 @@
   --neonpink:#fd8dde;
   --skyblue:#6ac2dc;
 }
+html{
 
+}
 body{
 
-background-color: var(--skyblue);
+background-color: var(--blackblue);
   color: #fff;
   font-family:arial;
    font-weight:bold;
    font-size:20px;
    z-index: 0;
+   overflow-x: hidden;
+   max-width: 100%;
  }
  h1{
    font-family: 'Pacifico', cursive;
@@ -22,10 +26,10 @@ background-color: var(--skyblue);
    display: inline;
  }
  h2{
-   font-family: Monoton;
+  font-family: 'Exo 2', sans-serif;
    font-size: 80px;
    font-weight: 100;
-   clear:both;
+
  }
 
 
@@ -44,10 +48,13 @@ background-color: var(--skyblue);
    clear: both;
    margin-top: 20px;
 
+
  }
 .main-container{
   width:100%;
   margin:0 auto;
+
+
 
  }
 
@@ -75,18 +82,101 @@ background-color: var(--skyblue);
 
 .full-width#my-logo{
   align-content: center;
-  ;
-
 }
+
+nav a{
+  text-decoration: none;
+  color: #FFF;
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+}
+nav ul{
+  margin-right: 50px;
+  list-style: none;
+}
+ nav li {
+  float:right;
+   padding-left: 20px;
+ }
+ li{
+   list-style: none;
+ }
+.main-header{
+padding: 15px 30px;
+display: flex;
+background-color: var(--blackblue);
+position:-webkit-sticky;
+position:sticky;
+top:0;
+z-index: 99;
+}
+
 
 /** hero secion & ocean wave animation **/
-div.full-width#wave-container{
-  position: relative;
-  height:400px;
+
+div.full-width#hero{
+background-image: linear-gradient(#e6f9ff, #53acfb, #131223);
+padding-top: 20px;
 
 }
-div.full-width#hero{
+div.full-width#logo-container{
 
+padding-top: 20px;
+height:700px;
+
+}
+#logo{
+position: absolute;
+left:50%;
+margin-left: -250px;
+  width:500px;
+  z-index:4;
+
+}
+#islands-container{
+  position: relative;
+  clear:both;
+  width:100%;
+  height:2px;
+
+}
+
+#islands-right{
+  position: absolute;
+  bottom:-450;
+  right:20;
+  width:628px;
+  opacity: .5;
+}
+#islands-left{
+  position: absolute;
+  bottom:-400;
+  left:20;
+  width:800px;
+  opacity: .8;
+}
+@media (max-width:1024px) {
+  #islands-right{
+  visibility: hidden;
+  }
+  #islands-left{
+  width:500px;
+  }
+}
+@media (max-width:768px) {
+  #islands-left{
+  width:450px;
+  }
+}
+.main-content{
+
+}
+
+div.full-width#wave-container{
+  position: relative;
+  height:700px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 @keyframes wave{
   0%,100%{
@@ -108,13 +198,13 @@ div.full-width#hero{
     transform: translate(0,0);
   }
   25%{
-    transform: translate(-25px,-5px);
+    transform: translate(-25px,-10px);
   }
   50%{
     transform: translate(-50px,0px);
   }
   75%{
-    transform: translate(-25px,5px);
+    transform: translate(-25px,10px);
   }
 
 }
@@ -135,18 +225,18 @@ div.full-width#hero{
 
 #ocean-break{
   position:absolute;
-  bottom: -100;
-  left:-100;
+  bottom: 10;
+  left:-150;
   z-index: 4;
-  height: 280PX;
-  -webkit-animation: break 5s linear infinite; /* Safari 4+ */
-  -moz-animation:break 5s linear infinite; /* Fx 5+ */
-  -o-animation:break 5s linear infinite; /* Opera 12+ */
-  animation:break 5s linear infinite;  /* IE 10+, Fx 29+ */
+  height: 150PX;
+  -webkit-animation: break 8s linear infinite; /* Safari 4+ */
+  -moz-animation:break 8s linear infinite; /* Fx 5+ */
+  -o-animation:break 8s linear infinite; /* Opera 12+ */
+  animation:break 8s linear infinite;  /* IE 10+, Fx 29+ */
 }
 #ocean-wave{
   position:absolute;
-  bottom: 0;
+  bottom: 80;
   left:-200;
   height:300px;
   z-index:3;
@@ -158,8 +248,8 @@ div.full-width#hero{
 }
 #ocean-wave-2{
   position:absolute;
-  bottom: 60;
-  left:-100;
+  bottom: 180;
+  left:-400;
   height:300px;
   z-index:2;
   -webkit-animation: wave2 4s linear infinite; /* Safari 4+ */
@@ -170,8 +260,8 @@ div.full-width#hero{
 }
 #ocean-wave-3{
   position:absolute;
-  bottom: 120;
-  left:-150;
+  bottom: 250;
+  left:-300;
   height:300px;
   z-index:1;
   -webkit-animation: wave 8s linear infinite; /* Safari 4+ */
@@ -180,45 +270,13 @@ div.full-width#hero{
   animation:wave 8s linear infinite;  /* IE 10+, Fx 29+ */
 }
 
-nav a{
-  text-decoration: none;
-  color: #FFF;
-  font-family: 'Righteous', cursive;
-  font-size: 30px;
-}
-ul{
-  margin-right: 50px;
-  list-style: none;
-}
-li {
-  float:right;
-   padding-left: 20px;
+
+/*** below the hero section ***/
 
 
- }
-.main-header{
-height:100px;
-display: flex;
-background-color: var(--blackblue);
-position:-webkit-sticky;
-position:sticky;
-top:0;
-}
-
-/*** main section ***/
-#logo{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:500px;
-
-}
-.main-content{
-  margin-top: 20px;
-}
 /**the resume container **/
 
-div#resume-container {
+div#resume {
   background-color: var(--blackblue);
  transition: color, background-color .5s ease-in-out;
   display: flex;
@@ -226,43 +284,92 @@ div#resume-container {
   align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
+  margin-top: 0;
 
 }
 #toggle-resume{
-  opacity: 100;
+  opacity: 0;
   margin-left: -80px;
   margin-bottom: -200px;
 }
-div#resume-container:hover  {
+div#resume-label:hover  {
   color:var(--neonpink);
   background-color: #131223;
-  transition: color,background-color .5s ease-in;
+  transition: all 1s ease-in-out;
 }
-#toggle-resume:checked ~ div#resume-container *{
+#toggle-resume:checked ~ div#resume *{
  visibility: visible;
- max-height: 800px;
+ max-height: 2000px;
  transition: visibility, max-height, height 1s ease-in-out;
 }
-#toggle-resume:checked ~ div#resume-container {
-background-color: #fff;
-transition: height 1s linear;
-max-height: 800px;
-transition: height 1s;
-color:var(--neonpink);
-background-color: #131223;
+#toggle-resume:checked ~ div#resume-content {
+max-height: 2000px;
+
+}
+#toggle-resume:checked ~ div#resume{
+  max-height: 3000px;
 }
 div#resume-content{
- transition: all .5s ease-in-out;
-visibility: hidden;
- background-color: #202020;
- width:100%;
  padding:20px 30px;
  max-height: 0px;
- display: flex;
- flex-wrap:wrap;
+ text-align: center;
+ overflow: hidden;
+ opacity: 1;
+
+}
+ /*** portfolio ***/
+ div#portfolio {
+   background-color: var(--blackblue);
+  transition: color, background-color .5s ease-in-out;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   overflow: hidden;
+   margin-top: 0;
+
+ }
+ #toggle-portfolio{
+   opacity: 0;
+   margin-left: -80px;
+   margin-bottom: -200px;
+ }
+ div#portfolio-label:hover  {
+   color:var(--neonpink);
+   background-color: #131223;
+   transition: color,background-color .5s ease-in;
+ }
+ #toggle-portfolio:checked ~ div#portfolio *{
+  visibility: visible;
+  max-height: 2000px;
+  transition: visibility, max-height, height 1s ease-in-out;
+ }
+ #toggle-portfolio:checked ~ div#portfolio-content {
+ max-height: 2000px;
+ transition: all 1s ease-in-out;
+ color:var(--neonpink);
+ visibility: visible;
+ }
+ #toggle-portfolio:checked ~ div#portfolio{
+   max-height: 3000px;
+ }
+ div#portfolio-content{
+  padding:20px 30px;
+  max-height: 0px;
+  text-align: center;
+  overflow: hidden;
+ }
+
+/*** footer ***/
+.main-footer{
+  text-align: center;
 }
 
-/*** resume hero ***/
+/**** the bubbles ***/
+
+
+
+
 /*
 .full-width#hero-resume{
   background-color: #fff;
